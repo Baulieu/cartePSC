@@ -2,20 +2,26 @@
 il faudra créer des librairies qui se chargeront de tout le taff.
 */
 
+#include <Comm1.h>
+
+
 unsigned long time;
 int duree_loop;
-int led_alerte = 13;
+int led_alert = 13;
 
-setup()
+void setup()
 {
   duree_loop = 100; //choisir ici la durée d'une loop !!!doit etre cohérent avec l'autre carte!!!
   pinMode (led_alert, OUTPUT);
 }
 
-loop()
+void loop()
 {
   // on utilise un timestamp pour permettre une synchronisation entre les deux cartes. + attendre un retour, pour etre sur de ne pas rater de tour.
   time = millis();
+  
+  //communication entre les cartes
+  
   // sert à gérer la durée d'une loop
   if (millis() - time < duree_loop) {
     delay(duree_loop - millis() + time);
