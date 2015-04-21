@@ -1,0 +1,14 @@
+les trucs à savoir:
+
+-> loi de communication:
+	-> la carte1 envoie toujours un signal à la carte 2.
+	-> la carte1 met son pin d'envoi à 1, et a un pin de reception à 0.
+	-> la carte2 voit que son pin de reception passe à 1, elle lit la valeur puis passe son pin d'envoi à 1
+	-> la carte1 lit le 1 et met son pin d'envoi à 0
+	-> la carte2 lit le 0 et met son pin d'envoi à 1
+
+-> principe: la carte1 a pour seul role d'envoyer une valeur à prendre pour la vitesse.
+La carte2 se charge de l'asservissement.
+La carte1 tient un pin constamment à 1. Si il passe à 0, c'est que la carte a un problème.
+
+-> les deux cartes indiquent par la led 13 si elles sont en burnout
