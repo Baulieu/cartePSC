@@ -1,5 +1,5 @@
 /*
-il faudra créer des librairies qui se chargeront de tout le taff.
+il faudra créer des librairies qui se chargeront de tout le taff. -> merci de ce commentaire constructif. -> mais de rien, c'est un plaisir.
 */
 
 #include <Comm1.h>
