@@ -8,6 +8,7 @@ il faudra créer des librairies qui se chargeront de tout le taff. -> merci de c
 unsigned long time;
 int duree_loop;
 int led_alert = 13;
+Comm1 communicator(100);
 
 void setup()
 {
@@ -20,7 +21,8 @@ void loop()
   // on utilise un timestamp pour permettre une synchronisation entre les deux cartes. + attendre un retour, pour etre sur de ne pas rater de tour.
   time = millis();
   
-  //communication entre les cartes
+  //communication entre les cartes -> on teste en envoyant la valeur 100.
+  communicator.envoi(100);
   
   // sert à gérer la durée d'une loop
   if (millis() - time < duree_loop) {
