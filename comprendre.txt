@@ -12,7 +12,7 @@ donc, il faut relier:
 	8  |  7
 	9  |  9
 	10 |  10
-
+un truc bon à savoir: l'écriture analogique se fait sur une pin digital, mais la lecture se fait sur une pin analogique!
 
 
 -> principe: la carte1 a pour seul role d'envoyer une valeur à prendre pour la vitesse.

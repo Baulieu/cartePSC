@@ -29,7 +29,7 @@ bool Comm1::envoi (int valeur)
   
   //on attend que l'autre carte réponde. Si elle tarde trop, on renvoie false
   _i = 0;
-  while (digitalRead(_pin_reception == LOW))
+  while (digitalRead(_pin_reception) == LOW)
   {
     _i++;
     if (_i > _attenteMax)

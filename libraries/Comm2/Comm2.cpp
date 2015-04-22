@@ -14,8 +14,8 @@ Comm2::Comm2(int attenteMax)
   pinMode(_pin_reception, INPUT);
   _pin_alive = 9; //pin de reception
   pinMode(_pin_alive, INPUT);
-  _pin_valeur = 10; //pin de reception de la valeur
-  pinMode(_pin_valeur, INPUT);
+  _pin_valeur = 3; //pin de reception de la valeur !!!ATTENTION pin analogique!!!
+  //pinMode(_pin_valeur, INPUT);
   _valeur = 0;
 }
 

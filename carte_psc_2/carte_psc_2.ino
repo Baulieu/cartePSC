@@ -6,14 +6,14 @@
 unsigned long time;
 int duree_loop;
 int led_alert = 13;
-int valeurRecue = -1;
+int valeurRecue = 0;
 int i = 0;
-Comm2 receiver(100);
+Comm2 receiver(1000);
 
 void setup()
 {
   duree_loop = 100; //choisir ici la durée d'une loop !!!doit etre cohérent avec l'autre carte!!!
-  pinMode(led_alert, OUTPUT);
+  pinMode (led_alert, OUTPUT);
 }
 
 void loop()
@@ -28,19 +28,19 @@ void loop()
     for(i = 0; i < 20; i++)
     {
       digitalWrite(led_alert, LOW);
-      delay(500);
+      delay(200);
       digitalWrite(led_alert, HIGH);
-      delay(500);
+      delay(200);
     }
   }
-  else
+  else// if (valeurRecue == 100)
   {
-    for(i = 0; i < 20; i++)
+    for(i = 0; i < 5; i++)
     {
       digitalWrite(led_alert, LOW);
-      delay(2000);
+      delay(1000);
       digitalWrite(led_alert, HIGH);
-      delay(2000);
+      delay(1000);
     }
   }
   
